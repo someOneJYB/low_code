@@ -1,0 +1,235 @@
+/* src/components/JsonEditor/JsonEditor.module.css */
+.jsonEditor {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.statusBar {
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.errorStatus {
+  background-color: #fadbd8;
+  color: #e74c3c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.errorIcon {
+  font-size: 16px;
+}
+
+.statusMessage {
+  color: #7f8c8d;
+}
+
+.unsavedChanges {
+  color: #f39c12;
+  font-weight: 500;
+}
+
+.savedStatus {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.controlBtn {
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlBtn:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.controlBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.controlBtn.active {
+  background-color: #2c3e50;
+  font-weight: bold;
+}
+
+.saveBtn {
+  background-color: #27ae60;
+}
+
+.saveBtn:hover:not(:disabled) {
+  background-color: #219653;
+}
+
+.resetBtn {
+  background-color: #e67e22;
+}
+
+.resetBtn:hover:not(:disabled) {
+  background-color: #d35400;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.codeEditor {
+  position: relative;
+  height: 400px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow-y: scroll;
+}
+
+.textArea {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  border: none;
+  resize: none;
+  background-color: transparent;
+  color: transparent;
+  caret-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  tab-size: 2;
+}
+
+.highlightedJson {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+    height: auto;
+  padding: 15px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-all;
+  background-color: #f5f5f5;
+  z-index: 1;
+}
+
+.treeView {
+  height: 400px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.treeNode {
+  margin-bottom: 5px;
+}
+
+.nodeHeader {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 0;
+  cursor: default;
+}
+
+.toggleBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  text-align: center;
+  font-size: 10px;
+  color: #7f8c8d;
+}
+
+.jsonKey {
+  color: #2980b9;
+  font-weight: bold;
+}
+
+.jsonString {
+  color: #27ae60;
+}
+
+.jsonNumber {
+  color: #d35400;
+}
+
+.jsonBoolean {
+  color: #9b59b6;
+}
+
+.jsonNull {
+  color: #7f8c8d;
+}
+
+.jsonCollapsed {
+  color: #95a5a6;
+  font-style: italic;
+  margin-left: 5px;
+}
+
+.nodeChildren {
+  margin-left: 15px;
+  border-left: 1px dashed #ddd;
+  padding-left: 10px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 20px;
+  color: #7f8c8d;
+}
+
+.editorInfo {
+  background-color: #e8f4fd;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.editorInfo p {
+  margin: 5px 0;
+}
+
+.editorInfo strong {
+  color: #2980b9;
+}
